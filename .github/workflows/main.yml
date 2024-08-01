@@ -16,12 +16,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Verify existence of example1.txt
+    - name: Verify existence of example.txt
       run: |
-        if grep -q "Hello" example1.txt; then
-          echo "text exists in example1.txt"
-          cat example.txt
+        if grep -q "Hello" example.txt; then
+          echo "text exists in example.txt"
         else
-          echo "text does not exist in example1.txt"
+          echo "text does not exist in example.txt"
           exit 1
         fi
