@@ -18,7 +18,7 @@ jobs:
 
     - name: Verify existence of example.txt
       run: |
-        if grep -q "Hello" example.txt; then
+        if grep -q "Hello Shivam" example.txt; then
           echo "text exists in example.txt"
         else
           echo "text does not exist in example.txt"
