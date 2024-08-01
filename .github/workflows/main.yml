@@ -18,10 +18,10 @@ jobs:
 
     - name: Verify existence of example1.txt
       run: |
-        if [ -f "example1.txt" ]; then
-          echo "File exists: example1.txt"
+        if grep -q "Hello" example1.txt; then
+          echo "text exists in example1.txt"
           cat example.txt
         else
-          echo "File does not exist: example1.txt"
+          echo "text does not exist in example1.txt"
           exit 1
         fi
