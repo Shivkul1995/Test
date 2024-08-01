@@ -1,0 +1,27 @@
+name: CI/CD Pipeline
+
+# Trigger the workflow on push to the main branch
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+# Define the jobs to run
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Verify existence of example.txt
+      run: |
+        if [ -f "example.txt" ]; then
+          echo "File exists: example.txt"
+          cat example.txt
+        else
+          echo "File does not exist: example.txt"
+          exit 1
+        fi
