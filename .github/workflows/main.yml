@@ -18,7 +18,7 @@ jobs:
 
     - name: Verify existence of example1.txt
       run: |
-        if [ -f "example.txt" ]; then
+        if [ -f "example1.txt" ]; then
           echo "File exists: example1.txt"
           cat example.txt
         else
