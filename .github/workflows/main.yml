@@ -16,12 +16,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Verify existence of example.txt
+    - name: Verify existence of example1.txt
       run: |
         if [ -f "example.txt" ]; then
-          echo "File exists: example.txt"
+          echo "File exists: example1.txt"
           cat example.txt
         else
-          echo "File does not exist: example.txt"
+          echo "File does not exist: example1.txt"
           exit 1
         fi
